@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Homepage</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue; /* Initial color */
+            margin: 20px auto;
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            margin: 20px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px auto;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+        .text-change {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body onload="pageLoaded()">
+
+    <h1>Welcome to the Interactive Web Page</h1>
+
+    <h2>Explore the different events in action!</h2>
+
+    <div>
+        <button onclick="clickButton()">Click Me for an Alert</button>
+    </div>
+
+    <div>
+        <h2>Hover over the box below:</h2>
+        <div class="box" id="hoverBox" onmouseover="changeColorOnHover()" onmouseout="resetColor()"></div>
+    </div>
+    
+    <h2>Type something below:</h2>
+
+    <div>
+        <input type="text" placeholder="Type here..." onchange="handleChange(event)" onkeydown="logKey(event)">
+    </div>
+
+    <div class="text-change" id="textChange">
+        Watch this text change color every 3 seconds!
+    </div>
+
+    <h2>Image Mouse Hover:</h2>
+    <img src="https://via.placeholder.com/100" alt="Placeholder Image" class="image" onmouseover="changeImageOnHover()" onmouseout="resetImage()">
+
+    <script src="test.js"></script>
+
+</body>
+</html>
